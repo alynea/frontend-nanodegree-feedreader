@@ -96,8 +96,8 @@ $(function () {
 
         });
         it("should load single entry", function (done) {
-            let entries = $(".feed .entry").html("h2");
-            expect(entries.toArray().length).toBeGreaterThan(0);
+            let entries = $(".feed .entry").toArray().length;
+            expect(entries).toBeGreaterThan(0);
             done();
         });
 
@@ -108,26 +108,7 @@ $(function () {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-        // let newsFeed1;
-        // let index = 0
-        // beforeEach(function (done) {
-        //     loadFeed(index++, function () {
-        //         done();
-        //     });
-        // });
 
-        // it("should load first feed", function(done){
-        //     let newsFeed1 = $(".entry").get(0).firstElementChild.innerText;
-        //     expect(newsFeed1).not.toBeNull();
-        //     done();
-        // });
-
-        // it("should load second feed", function(done){
-        //     let newsFeed2 = $(".entry").get(0).firstElementChild.innerText;
-        //     expect(newsFeed2).not.toBeNull();
-        //     expect(newsFeed1).not.toEqual(newsFeed2);
-        //     done();
-        // });
 
         let newsFeed1,
             newsFeed2;
